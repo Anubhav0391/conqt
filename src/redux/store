@@ -1,0 +1,9 @@
+import { applyMiddleware, combineReducers, legacy_createStore } from "redux";
+import { thunk } from "redux-thunk";
+import { inventryManagment } from "./reducers/inventryManagment";
+
+const reducer = combineReducers({
+  inventryManagment,
+});
+
+export const store = legacy_createStore(reducer);
